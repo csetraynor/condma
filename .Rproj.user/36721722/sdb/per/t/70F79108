@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "#' Extract standard error\n#'\n#' Estimate the standard error\n#'\n#' @param ci It's the percentile that is used for finding the quantile function from a t-distribution with df degrees of freedom. Default is CI 95% which correspond to perc .975 (Others ci may be used).  The quantile will be differently obtained if p_value is provided.\n#' @param n number of patients\n#' @param upper_limit upper limit of confidence interval\n#' @param lower_limit lower limit of confidence interval\n#' @param p_value It is assumed that p is equal to the upper bound, difference is required.\n#' @param diff The difference\n#' @return SE_diff\n#' @keywords se\n#' @author Carlos S Traynor\n#' @export est_se\nest_se <- function(n, ci = .95 , ul, ll, diff, p = NA){\n  df <- n -2   # This is  -2  because assumes that we are estimating two values one in treatment group and one in control group\n  if(is.na(p)){\n    perc <- 1-(1-ci)/2 #Find percentile\n    t_alpha <- qt(perc, df)  # Find the value of the t statistic for the CI\n    se = (ul - ll) / (2 * t_alpha)\n  } else{\n    t_alpha <- qt(1- p/2, df)\n    se = diff / t_alpha\n  }\n  return(se)\n}\n",
+    "created" : 1528111044747.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "177818991",
+    "id" : "70F79108",
+    "lastKnownWriteTime" : 1528117020,
+    "last_content_update" : 1528117020054,
+    "path" : "C:/RFactory/condma/R/extract_std_error.R",
+    "project_path" : "R/extract_std_error.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
