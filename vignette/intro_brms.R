@@ -21,6 +21,8 @@ ggplot(dat, aes(x=yi, y=study)) +
 
 res.fe <- rma(yi, vi, data=as.data.frame(dat), method="FE")
 summary(res.fe)
+funnel(res.fe, xlab = "Log odds ratio")
+radial(res.fe)
 metafor::forest(res.fe)
 # Random-Effects Model
 

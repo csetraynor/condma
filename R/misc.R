@@ -22,12 +22,21 @@ extract.model <- function(object, ...){
 }
 
 
-extract_hr <- function(object, ...){
-  object$LL <- as.double(gsub(".*\\[ |, .*","", object$HR) )
+extract_par <- function(object, logHR = T, ...){
 
-  object$UL <- as.double(gsub(".*, | \\]$","",object$HR) )
+  if(logHR){
+    object$SE <- as.double(gsub(".*\\(|)","", object$logHR) )
 
-  object$HR <- as.double(gsub(" \\[.*","", object$HR) )
+    object$logHR <- as.double(gsub(" \\(.*","", object$logHR) )
+  }else{
+    object$LL <- as.double(gsub(".*\\[ |, .*","", object$HR) )
+
+    object$UL <- as.double(gsub(".*, | \\]$","",object$HR) )
+
+    object$HR <- as.double(gsub(" \\[.*","", object$HR) )
+  }
+
+
 
   object
 
