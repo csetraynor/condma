@@ -2,3 +2,6 @@ Write Intro and Methods of the Lung Meta-Analysis.
 Drugs to be searched are:
 	- Iressa(gefitinib)
 	- Tagrisso (Osimertinib) 
+
+	
+Create plot action with survminer and ggforest.
