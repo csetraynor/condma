@@ -40,6 +40,8 @@ devtools::use_data(dat.test.molloy2014, overwrite = TRUE)
 
 
 
-lung <- read_csv("data_raw/TKI_summary.csv")
+lung <- readr::read_csv("data_raw/TKI_summary.csv")
 
-extract_hr(lung)
+lung <- as.data.frame(extract_par(lung) )
+
+devtools::use_data(lung)

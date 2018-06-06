@@ -1,15 +1,15 @@
-Trial,Comparison,Outcome,HR,N
-BMSO99,Cetuximab plus CTX versus CTX,OS,"1.62 [ 0.54, 4.84 ]",17
-CHEN,Erlotinib versus vinorelbine,OS,"2.16 [ 0.58, 8.10 ]",24
-ENSURE,Erlotinib versus CTX ,OS,"0.91 [ 0.63, 1.31 ] ",217
-EURTAC,Erlotinib versus CTX ,OS,"0.91 [ 0.64, 1.29 ] ",173
-FASTACT 2,Erlotinib plus CTX versus CTX plus placebo,OS,"0.48 [ 0.27, 0.85 ]",97
-First-SIGNAL,Gefitinib versus gemcitabine plus cisplatin,OS,"1.04 [ 0.50, 2.20 ]",42
-FLEX,Cetuximab plus CTX versus CTX,OS,"1.48 [ 0.77, 2.82 ]",64
-IPASS,Gefitinib versus paclitaxel plus carboplatin,OS,"1.00 [ 0.76, 1.32 ] ",261
-LUX-Lung 3,Afatinib versus CTX,OS,"0.91 [ 0.66, 1.25 ]",345
-LUX-Lung 6,Afatinib versus CTX,OS,"0.95 [ 0.68, 1.33 ]",364
-NEJSG,Gefitinib versus paclitaxel plus carboplatin,OS,"0.89 [ 0.64, 1.24 ]",230
-TORCH,Erlotinib versus CTX ,OS,"1.58 [ 0.70, 3.61 ]",39
-WJTOG3405,Gefitinib versus docetaxel plus cisplatin,OS,"1.25 [ 0.88, 1.78 ]",177
-Yu 2014,Gefitinib plus CTX versus CTX,OS,"0.20 [ 0.05, 0.75 ]",31
+Trial,Comparison,Outcome,N,logHR
+BMSO99,Cetuximab plus CTX versus CTX,OS,17,0.48 (0.56)
+CHEN,Erlotinib versus vinorelbine,OS,24,0.77 (0.6744)
+ENSURE,Erlotinib versus CTX ,OS,217,-0.0943 (0.1876)
+EURTAC,Erlotinib versus CTX ,OS,173,-0.0943 (0.1789)
+FASTACT 2,Erlotinib plus CTX versus CTX plus placebo,OS,97,-0.73 (0.29)
+First-SIGNAL,Gefitinib versus gemcitabine plus cisplatin,OS,42,0.042 (0.38)
+FLEX,Cetuximab plus CTX versus CTX,OS,64,0.39 (0.33)
+IPASS,Gefitinib versus paclitaxel plus carboplatin,OS,261,0 (0.14)
+LUX-Lung 3,Afatinib versus CTX,OS,345,-0.0976 (0.1622)
+LUX-Lung 6,Afatinib versus CTX,OS,364,-0.05 (0.17)
+NEJSG,Gefitinib versus paclitaxel plus carboplatin,OS,230,-0.12 (0.17)
+TORCH,Erlotinib versus CTX ,OS,39,0.46 (0.42)
+WJTOG3405,Gefitinib versus docetaxel plus cisplatin,OS,177,0.2247 (0.1782)
+Yu 2014,Gefitinib plus CTX versus CTX,OS,31,-1.6094 (0.6776)
