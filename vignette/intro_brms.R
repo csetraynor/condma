@@ -42,7 +42,7 @@ bm.2 <-ic_meta(dat, hetero_var = TRUE, iter = 5000, warmup = 2000, cores = 4)
 (prior <- get_prior(yi | se(sei) ~ 1 + (1|study),
                     data = dat))
 summary(bm.out)
-bm.out2 <- extract.model(bm.out2)
+bm.out2 <- extract.model(bm.2)
 
 
 
